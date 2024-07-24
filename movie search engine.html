@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Engine</title>
+    <link rel="stylesheet" href="movie search engine.css">
+    <!-- <script >
+        function dataLoad(){
+        var searchBtn= document.getElementById("search-btn");
+var movieNameElement = document.getElementById("movie-name");
+var moviesContainerElement = document.getElementById("movies-container");
+
+searchBtn.addEventListener("click", function(){
+    
+        console.log(movieNameElement.value);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+    if(this.readyState == 4){
+       let result = JSON.parse(this.responseText);
+console.log(result.Search);
+let movies = result.Search;
+movies.map((item,i) => 
+{
+    console.log(item);
+    oviesContainerElement.innerHtml +=
+    `<div class="Mocie-csrd">
+    <img src="${item.Poster}"/>
+    <p> Title ${item.Title}</p>
+    <p>Year ${item.Year}</p>
+    <p> Type: ${item.Type}</p>
+    </div>`
+})
+    }
+    }
+    document.write(movieNameElement);
+
+    xhttp.open('GET', 'https;//www.omdbapi.com/?apikey=45f0782a&s='+movieNameElement.value , true)
+    xhttp.send();
+})
+}
+    
+    </script> 
+
+
+
+    <script>
+        var movieNameEle = document.getElementById('movie-name');
+var searchBtn = document.getElementById('search-btn');
+var moviesContainerElement = document.getElementById('movie-container');
+
+var xhttp = new XMLHttpRequest();
+searchBtn.addEventListener('click', function(){
+    console.log(movieNameEle.value);
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4){
+            var result = JSON.parse(this.responseText);
+            // console.log((result));
+            let movies = result.Search;                         //Search is json data name
+          //  document.write(movies)
+            movies.map((item,i) => {
+                console.log(item);
+                moviesContainerEle.innerHTML += 
+                `<div class="movie-card">
+                    <img src="${item.Poster}" />
+                    <p>Title: ${item.Title} </p>
+                    <p>Year: ${item.Year} </p>
+                    <p>Type: ${item.Type} </p>
+                </div>`
+            })
+        }
+    }
+    xhttp.open('GET','https://www.omdbapi.com/?apikey=45f0782a&s='+ movieNameEle.value, true);
+    xhttp.send();
+})
+
+
+//   +movieNameEle.value
+
+// moviesContainerEle.innerText = 'hello';
+
+// moviesContainerEle.innerHTML = 
+// /* <div><p> hai</p></div> */
+// 'hai';
+    </script>-->
+
+</head>
+<body>
+    <div style = "text-align: center;">
+
+   
+    <h1 >Movie Search Engine</h1>
+    <input id="movie-name" placeholder="Type the movie name here"/>
+    
+    <button id="search-btn">Search</button>
+    <p id = "movie-status"  style="font-size: 30px;text-align: center;"></p>
+
+<div id = "movies-container">
+<div class="movie-card">
+    
+<img class="movie-thumbnail" src ="https://assets.vogue.in/photos/5f16b3bc9ffca08d1848369b/2:3/w_2560%2Cc_limit/must-watch%2520action%2520movies.jpg"/>
+<p><b>Title:</b>Action</p>
+<p><b>Release year:</b>2007</p>
+<p><b> Type:</b>Action</p>
+</div>
+<div class="movie-card">
+    <!-- <img  class="movie-thumbnail" src="/images/Photo.jpeg"></img> -->
+<img class="movie-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMjQ3MzhlNzQtZGEyOC00OWI2LWI5NDAtNTlmMTUwMGI3ODM3XkEyXkFqcGdeQXVyNTgxODY5ODI@._V1_FMjpg_UX1000_.jpg"/>
+
+<p><b>Title:</b>Salar</p>
+<p><b>Release year:</b>2024</p>
+<p><b> Type:</b>Action</p>
+</div>
+<div class="movie-card">
+    <img class="movie-thumbnail" src="http://images4.fanpop.com/image/photos/22800000/-movie-posters-22851112-1280-1024.jpg"/>
+    <p><b>Title:</b>Stealth</p>
+    <p><b>Release year:</b>2023</p>
+    <p><b> Type:</b>Action</p>
+</div>
+<div class="movie-card">
+    <img class="movie-thumbnail" src="https://tse2.mm.bing.net/th?id=OIP.460JYOyYBKZQAzLM_MtMCQHaJ3&pid=Api&P=0&h=180"/>
+    <p><b>Title:</b>Titanic</p>
+    <p><b>Release year:</b>2001</p>
+    <p><b> Type:</b>Action</p>
+</div>
+<div class="movie-card">
+    <img class="movie-thumbnail" src="https://fr.web.img4.acsta.net/pictures/19/05/24/12/36/0505470.jpg"/>
+    <p><b>Title:</b>Spiderman/p>
+    <p><b>Release year:</b>2000</p>
+    <p><b> Type:</b>Action</p>
+</div>
+<div class="movie-card">
+    <img class="movie-thumbnail" src="https://tse4.mm.bing.net/th?id=OIP.MKjGKI0EEBN8w-JzmOKc8AHaLH&pid=Api&P=0&h=180"/>
+    <p><b>Title:</b>Spiderman-3</p>
+    <p><b>Release year:</b>2001</p>
+    <p><b> Type:</b>Action</p>
+</div>
+</div>
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+
+     <script src="./movie search engine.js" >  </script>
+    
+   
+</body>
+</html>
